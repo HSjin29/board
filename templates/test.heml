@@ -1,0 +1,28 @@
+<result>
+    <documents>
+        <address>
+            <address_name>제주특별자치도 서귀포시 성산읍 성산리 1</address_name>
+            <b_code>5013025921</b_code>
+            <h_code>5013025900</h_code>
+            <main_address_no>1</main_address_no>
+            <mountain_yn>N</mountain_yn>
+            <region_1depth_name>제주특별자치도</region_1depth_name>
+            <region_2depth_name>서귀포시</region_2depth_name>
+            <region_3depth_h_name>성산읍</region_3depth_h_name>
+            <region_3depth_name>성산읍 성산리</region_3depth_name>
+            <sub_address_no></sub_address_no>
+            <x>126.942496776521</x>
+            <y>33.458409737774</y>
+        </address>
+        <address_name>제주특별자치도 서귀포시 성산읍 성산리 1</address_name>
+        <address_type>REGION_ADDR</address_type>
+        <road_address></road_address>
+        <x>126.942496776521</x>
+        <y>33.458409737774</y>
+    </documents>
+    <meta>
+    <is_end>true</is_end>
+    <pageable_count>1</pageable_count>
+    <total_count>1</total_count>
+    </meta>
+</result>
