@@ -11,15 +11,42 @@
       </thead>
       <tbody>
         {% for article in article_list %}
-        <tr>
+        <tr onclick ="detail({{ article.id }})">
+          <td>
+            {{ article.id }}
+          </td>
           <td>{{ article.title }}</td>
-          <td>{{ article.content }}</td>
           <td>{{ article.user.name }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
+
+    <div style='text-align:center;'>
+      <ul class='pagination'>
+        {% for i in page_info %}
+          <li>
+          <a href='/article/list/?page={{ i }}'>
+            {{ i }}
+          </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <button onclick="move()" class="btn btn-danger input-lg">글쓰기</button>
   </div>
 </div>
 
+<script>
+  // 주소 링크
+  function move(){
+    location = "/article/write/";
+  }
+// 변수값 지정해서 해당페이지로 가라
+// back tick `
+  function detail(n){
+    location = `/article/detail/${n}/`;
+  }
+</script>
 {% endblock %}
