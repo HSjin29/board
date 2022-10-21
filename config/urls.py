@@ -37,4 +37,6 @@ urlpatterns = [
     path('map_data2/', views.map_data2),
 
     path('contact/', views.contact),
+
+    path('article/reply/<int:id>/', views.reply),
 ]

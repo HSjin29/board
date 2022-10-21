@@ -250,3 +250,19 @@ def send_mail(from_email, to_email, msg):
   msg['To'] = from_email
   smtp.sendmail(from_email, from_email, msg.as_string())
   smtp.quit()
+
+from article.models import Reply
+from django.shortcuts import redirect
+
+def reply(request, id):
+  email = request.session.get('email')
+  user = User.objects.get(email=email)
+  article = Article.objects.get(id=id)
+  content = request.GET.get('content')
+
+  reply = Reply(content=content, user=user, article=article)
+  reply.save()
+
+  return redirect('/article/detail/%s/' % id)
+
+

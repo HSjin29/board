@@ -9,3 +9,9 @@ class Article(models.Model):
   title = models.CharField(max_length=100)
   content = models.CharField(max_length=1000)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class Reply(models.Model):
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  content = models.CharField(max_length=1000)
+  article = models.ForeignKey(Article, on_delete=models.CASCADE)
+  
